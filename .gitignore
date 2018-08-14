@@ -32,3 +32,5 @@ node_modules/
 
 ### H2 DB ###
 db.mv.db
+
+.env
