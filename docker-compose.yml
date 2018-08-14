@@ -11,8 +11,7 @@ services:
     environment:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://${myip:-127.0.0.1}:9092
       KAFKA_LISTENERS: PLAINTEXT://:9092
-      
-      KAFKA_CREATE_TOPICS: "test:1:1"
+      KAFKA_CREATE_TOPICS: "stock-on-hand:1:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

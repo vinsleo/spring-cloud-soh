@@ -1,17 +1,12 @@
-#FIXME: SET Sensible defaults
 server.port: 0
 
-spring.application.name: ipt-service-soh-source
-
+spring.application.name: vinsleo-spring-cloud-soh
 
 spring.cloud.stream:
     bindings:
-        stock-on-hand:
-            destination: "Argos-dev-IPT-SOH"
-            contentType: "application/json"
-        stock-on-hand-filtered:
-            destination: "Argos-dev-IPT-Filtered-SOH"
-            contentType: "application/json"
+        output:
+            destination: "stock-on-hand"
+            contentType: "application/text"
     kafka.binder:
         brokers: "localhost"
         defaultBrokerPort: 9092
@@ -24,29 +19,20 @@ spring.cloud.stream:
                 key.serde: "org.apache.kafka.common.serialization.Serdes$StringSerde"
                 value.serde: "org.apache.kafka.common.serialization.Serdes$StringSerde"
 
-spring.datasource:
-    url: "jdbc:postgresql://localhost:5432/intake_planning"
-    #FIXME: Use Embedded Vault to fetch the credentials
-    username: owner-intake-planning
-    password: P@ssw0rd
-
-spring.flyway:
-    schemas: "ipt_soh"
-
-file:
-    consumer.mode: "lines"
-
+# Ensure the details here match the docker-compose.yml
 sftp:
     factory:
         host: 127.0.0.1
         port: 2222
-        #FIXME: Use Embedded Vault to fetch the credentials
         username: toothless
         password: hiccup
         allow-unknown-keys: true
-    remoteDir: "/upload/stock-on-hand/"
+    remoteDir: "/upload/"
     localDir: "./data"
     filename-pattern: "*.csv"
+
+file:
+    consumer.mode: "lines"
 
 trigger:
     fixed-delay: 3
