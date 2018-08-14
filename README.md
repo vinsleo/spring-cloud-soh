@@ -24,6 +24,10 @@ Compare the File in ./data folder to the Values on Kafka Topic and Log file (lik
 - Data from the  Odd number lines i.e 1,3,5,7,9 appears on LOG as received.
 - Data from the Even number lines i.e 2,4,6,8,10 appears on KAFKA Topic.
 
+Expecting,
+- all 10 lines to be in LOG
+- all 10 lines to be on KAFKA topic
+
 Not sure what's wrong?
 
 
