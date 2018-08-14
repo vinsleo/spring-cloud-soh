@@ -1,11 +1,11 @@
 Run the following step to reproduce the error
 
-- Clone the project
-- modify .env file to add your IP for KAFKA ADVERTISED_HOST and add DIR to map SFTP location to your machine folder
-- Move data file from ./data to dir you mentioned above
+1. Clone the project
+2. modify .env file to add your IP for KAFKA ADVERTISED_HOST and add DIR to map SFTP location to your machine folder
+3. Move data file from ./data to dir you mentioned above
 
-- Run docker-compose up -d :-> should start SFTP container KAFKA container and ZOOKEEPER container
-- Run ./mvnw spring-boot:run :-> should pull the file from above mentioned directory back to ./data folder and should print following lines 
+4. Run docker-compose up -d :-> should start SFTP container KAFKA container and ZOOKEEPER container
+5. Run ./mvnw spring-boot:run :-> should pull the file from above mentioned directory back to ./data folder and should print following lines 
 
 
 - 2018-08-14 19:50:29.266  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,538686012,605,97,2018-05-07 09:05:35,37
