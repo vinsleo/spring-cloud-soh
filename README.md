@@ -8,11 +8,11 @@ Run the following step to reproduce the error
 - Run ./mvnw spring-boot:run :-> should pull the file from above mentioned directory back to ./data folder and should print following lines 
 
 
-2018-08-14 19:50:29.266  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,538686012,605,97,2018-05-07 09:05:35,37
-2018-08-14 19:50:29.267  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,549255822,605,97,2018-05-07 09:05:35,1
-2018-08-14 19:50:29.269  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,5409871,605,97,2018-05-07 09:05:35,17
-2018-08-14 19:50:29.270  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,5712221,605,97,2018-05-07 09:05:35,7
-2018-08-14 19:50:29.271  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,5434815,605,97,2018-05-07 09:05:35,25
+- 2018-08-14 19:50:29.266  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,538686012,605,97,2018-05-07 09:05:35,37
+- 2018-08-14 19:50:29.267  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,549255822,605,97,2018-05-07 09:05:35,1
+- 2018-08-14 19:50:29.269  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,5409871,605,97,2018-05-07 09:05:35,17
+- 2018-08-14 19:50:29.270  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,5712221,605,97,2018-05-07 09:05:35,7
+- 2018-08-14 19:50:29.271  INFO 70271 --- [ask-scheduler-1] tpSource$$EnhancerBySpringCGLIB$$6aa6212 : Received line : 622,5434815,605,97,2018-05-07 09:05:35,25
 
 
 
