@@ -18,7 +18,7 @@ services:
   atmoz-sftp:
       image: atmoz/sftp
       volumes:
-          - ${mydir:-/var/tmp/}:/home/toothless/upload
+          - ${mydir:-/tmp/upload/}:/home/toothless/upload
       ports:
           - "2222:22"
       command: toothless:hiccup:1001

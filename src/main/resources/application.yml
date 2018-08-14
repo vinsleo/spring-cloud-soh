@@ -42,4 +42,4 @@ logging:
     level:
         root: "warn"
         org.springframework: "info"
-        uk.co.argos: "debug"
+        com.vinsleo: "debug"
