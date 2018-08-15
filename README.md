@@ -31,3 +31,12 @@ Expecting,
 Not sure what's wrong?
 
 
+UPDATE:
+Issue is the Source.Output is a Direct Channel bound by the Binders Producer to send the data from Output Channel onto Binder.
+And the Code is Subscribed to Source.Output Channel as well to log whats going on Binder using @StreamListener(Source.OUTPUT).
+
+So now when SFTP SOurce App reads from File and writes to Source.Output the data alternates between the Code and Binder's producer. Code writes Data to Log and Binder's Produce writes onto Binder in round-robin fashion.
+
+Solution:
+Option 1: Instead of listening to the Source.output WireTap OutPut channel to another Direct Channel and listen to new Direct Channel using @ServiceActivator instead of @StreamListener
+
