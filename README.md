@@ -38,7 +38,7 @@ And the Code is Subscribed to Source.Output Channel as well to log whats going o
 So now when SFTP SOurce App reads from File and writes to Source.Output the data alternates between the Code and Binder's producer. Code writes Data to Log and Binder's Produce writes onto Binder in round-robin fashion.
 
 Solution:
-Option 1: Instead of listening to the Source.output WireTap OutPut channel to another Direct Channel and listen to new Direct Channel using @ServiceActivator instead of @StreamListener check commit (552027ade245f6a434a5f34c980e844a13198115)
+Option 1: Instead of listening to the Source.output WireTap OutPut channel to another Direct Channel and listen to new Direct Channel using @ServiceActivator instead of @StreamListener > check commit (552027ade245f6a434a5f34c980e844a13198115)
 
-Option 2: Do not user @StreamListener on Source.output just create additional Input Channel on the underlying Topic and instead use @StreamListener on new Channel. 
+Option 2: Do not user @StreamListener on Source.output just create additional Input Channel on the underlying Topic and instead use @StreamListener on new Channel. > check commit  (b5d1f7d25b5e1802aa87bf2ed88f7a74ec6bacb1)
 
