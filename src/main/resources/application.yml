@@ -5,7 +5,10 @@ spring.application.name: vinsleo-spring-cloud-soh
 spring.cloud.stream:
     bindings:
         output:
-            destination: "stock-on-hand"
+            destination: "stock-on-hand-raw"
+            contentType: "application/text"
+        stock-on-hand-raw:
+            destination: "stock-on-hand-raw"
             contentType: "application/text"
     kafka.binder:
         brokers: "localhost"
